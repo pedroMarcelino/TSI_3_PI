@@ -17,10 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('todos', 'TodosController@index');
+Route::get('todos/{todo}', 'TodosController@show');
